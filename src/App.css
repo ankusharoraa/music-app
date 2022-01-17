@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.main-component {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-bottom: 10px;
   color: white;
+  width: 100%;
+  position: fixed;
 }
 
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-component{
+  padding-left: 10px;
+  position: fixed;
+  height: 80vh;
+  width: 40%;
+}
+.songList-component {
+  position: relative;
+  left: 42%;
+  border: 2px solid gray;
+  overflow-y: scroll; 
+  height:100vh;
+  max-width: 57%;
+  background-color: #10172a;
+  height: 80vh;
+}
+.songList-component p{
+  font-size: 20px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.player-component{
+  position: absolute;
+  top: 81%;
+  width: 100%;
+  background-color:#141414;
+  height: 19vh;
+}
+.selectedSongHighlight{
+  background-color: red;
+}
+.player-component audio{
+  position: relative;
+  left: 40%;
+  top: 25%;
 }
